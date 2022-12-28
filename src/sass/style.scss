@@ -1,5 +1,122 @@
-* {
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+img {
+    cursor: pointer;
+}
+
+.flex-class {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 100;
+
+    &__menu-img {
+        width: 22px;
+        margin-right: 25px;
+    }
+
+    &__logo-img {
+        width: 130px;
+    }
+
+    &__right-img {
+        width: 25px;
+        margin-right: 25px;
+
+        &:nth-child(4) {
+            width: 35px;
+            border-radius: 50%;
+            margin-right: 0;
+        }
+    }
+
+    &__mic-icon {
+        width: 16px;
+    }
+
+    &__search-box {
+        border: 1px solid #ccc;
+        margin-right: 15px;
+        padding: 8px 12px;
+        border-radius: 25px;
+
+        input {
+            width: 400px;
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+        }
+
+        img {
+            width: 15px;
+        }
+    }
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+    padding-left: 2%;
+    padding-top: 80px;
+    background-color: #fff;
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: #ccc;
+        width: 85%;
+    }
+
+    &__shortcut-links {
+
+        a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: fit-content;
+            flex-wrap: wrap;
+
+            &:first-child {
+                color: #ed3833;
+            }
+        }
+        img {
+            width: 20px;
+            margin-right: 20px;
+        }
+    }
+
 }
